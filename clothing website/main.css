@@ -116,27 +116,13 @@ main{
   width:90%;
   justify-content:space-between;
   margin:0 auto;
-  align-items: flex-start;
-}
-
-.information img{
-  width:100%;
-}
-.information h3{
-  position:absolute;
-  bottom:20px;
-  background-color: white;
-  font: 2rem/1 "Markazi";
-  padding:1rem;
-  transition: .3s all ease-in-out;
-}
-.information h3:hover{
-  transform:translate(20%);
 }
 .new-arrivals{
+  height:20rem;
+  padding:1rem;
   margin:2rem 1rem;
   flex:1;
-  position: relative;
+  background-color:green;
 }
 
 /*FASHION ARTICLES*/
@@ -254,13 +240,9 @@ footer{
 .footer-links li dl{
   font-weight:bold;
 }
-.signup{
+.newsletter{
   border:none;
   padding:.5rem;
-}
-.signup:hover{
-  background-color:white;
-  cursor: pointer;
 }
 
 .social-media{
