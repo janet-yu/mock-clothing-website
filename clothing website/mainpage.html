@@ -13,11 +13,12 @@
 <header>
   <nav>
     <img class = "logo" src = "images/styleright.png">
+    <img class = "burger" src="images/burger.png" alt="nav">
     <ul class = "hover-over">
       <li><a href="#" class = "categories">What's new?</a></li>
       <li><a href="#" class = "categories">Blog</a></li>
-      <li><a href="#" class = "categories">Women</a>
-        <ul class = "specific">
+      <li><a href="#" class = "categories" id = "women">Women</a>
+        <ul class = "dropdown">
           <a href="#"><li>Outerwear</li></a>
           <a href="#"><li>Sweaters</li></a>
           <a href="#"><li>Tops</li></a>
@@ -27,8 +28,8 @@
           <a href="#"><li>Sportswear</li></a>
         </ul>
       </li>
-      <li><a href="#" class = "categories">Men</a>
-        <ul class = "specific">
+      <li><a href="#" class = "categories" id = "men">Men</a>
+        <ul class = "dropdown">
           <a href="#"><li>Outerwear</li></a>
           <a href="#"><li>Sweaters</li></a>
           <a href="#"><li>Tops</li></a>
@@ -37,8 +38,8 @@
           <a href="#"><li>Shorts</li></a>
           <a href="#"><li>Sportswear</li></a>
         </ul></li>
-      <li><a href="#" class = "categories">Accessories</a>
-        <ul class = "specific">
+      <li><a href="#" class = "categories" id = "accessories">Accessories</a>
+        <ul class = "dropdown">
           <a href="#"><li>Bracelets</li></a>
           <a href="#"><li>Anklets</li></a>
           <a href="#"><li>Necklaces</li></a>
@@ -69,20 +70,20 @@
   <div class = "content-containers">
   <div class = "new-arrivals">
     <div class = "information">
-      <h3>What's hot?</h3>
-      <p>Most popular items</p>
+      <a href="#"><h3>What's hot?</h3></a>
+      <img src="images/whatshot.png" alt="whatshot">
     </div>
   </div>
   <div class = "new-arrivals">
     <div class = "information">
-      <h3>Women New Arrivals</h3>
-      <p>Most popular items</p>
+      <a href="#"><h3>Women New Arrivals</h3></a>
+      <img src="images/womennew.png" alt="women's new arrivals">
     </div>
   </div>
   <div class = "new-arrivals">
     <div class = "information">
-      <h3>Men New Arrivals</h3>
-      <p>Most popular items</p>
+      <a href="#"><h3>Men New Arrivals</h3></a>
+      <img src="images/mennew.png" alt="men's new arrivals">
     </div>
   </div>
   </div>
@@ -150,7 +151,7 @@
     <li>
       <dl>Sign up for our Newsletter</dl>
       <dd>Get the latest updates, coupons, news, and more!</dd>
-      <dd><button class = "newsletter">Sign up</button></dd>
+      <dd><button class = "signup">Sign up</button></dd>
     </li>
   </ul>
   <ul class = "social-media">
