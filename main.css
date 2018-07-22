@@ -1,0 +1,432 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  height:100%;
+}
+a{
+  text-decoration:none;
+  color:black;
+}
+
+/** NAVIGATION **/
+header{
+  background-color:#fff;
+  box-shadow:3px 1px 8px black;
+  width:100%;
+  height:65px;
+  display:flex;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  position:fixed;
+  align-items: center;
+  top:0;
+  z-index:2;
+}
+.logo{
+  width:10rem;
+  float:left;
+  margin:1rem;
+}
+.burger{
+  display:none;
+}
+.shopping-info{
+  display:flex;
+  flex-direction: column;
+  margin-right:2rem;
+  align-items: center;
+  opacity:.6;
+}
+.shopping-info:hover{
+  opacity:1;
+}
+.shopping-info a{
+  text-align: bottom;
+  font-size:.8rem;
+  margin-top:5px;
+  font-family: Comfortaa;
+  text-transform: uppercase;
+}
+.cart{
+  width:30px;
+  align-self:flex-start;
+}
+.avatar{
+  width:30px;
+  align-self: flex-start;
+}
+nav{
+  flex:2;
+}
+/** MAIN CONTENT **/
+main{
+  position:relative;
+  z-index:1;
+  display:block;
+}
+
+.slide-images{
+  width:100%;
+  margin:55px auto;
+
+}
+.content-containers{
+  display:flex;
+  width:90%;
+  justify-content:space-between;
+  margin:0 auto;
+  align-items: flex-start;
+}
+
+.information img{
+  width:100%;
+}
+.information h3{
+  position:absolute;
+  bottom:20px;
+  background-color: white;
+  font: 2rem/1 "Markazi";
+  padding:1rem;
+  transition: .3s all ease-in-out;
+}
+.information h3:hover{
+  transform:translate(20%);
+}
+.new-arrivals{
+  margin:2rem 1rem;
+  flex:1;
+  position: relative;
+}
+
+/*FASHION ARTICLES*/
+h1{
+  font-size:5rem;
+  font-family:"Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+  margin:3rem auto;
+  border-top:5px solid black;
+  border-bottom:5px solid black;
+  width:700px;
+}
+.fashion-content h2, .fashion-content h3{
+  font-family: "Raleway", sans-serif;
+  margin-bottom:1rem;
+  font-weight: lighter;
+  border-bottom:1.5px solid black;
+}
+h2{
+  font-size:4rem;
+}
+#no-underline{
+  border-bottom:none;
+}
+h3{
+  font-size:2rem;
+  padding:0 0 .5rem 0;
+}
+.fashion-articles{
+  width:80%;
+  margin:0 auto;
+  overflow:hidden;
+}
+.fashion-articles p{
+  font-size:20px;
+  text-align: justify;
+  font-family: "Markazi Text", serif;
+}
+.fashion-info{
+  padding:1rem;
+  margin:2rem 0;
+  display:flex;
+  width:100%;
+}
+.image{
+  height:500px;
+  background-color:pink;
+  max-width:450px;
+  border-radius:15px;
+  flex:1;
+  margin:0 1rem;
+}
+
+.sunglasses{
+  order:2;
+}
+.image3{
+  order:0;
+}
+.fashion-content{
+  flex:1;
+  margin:1rem 5%;
+}
+.fashion-content a{
+  margin-top:1rem;
+  display:block;
+  opacity:.5;
+  width:100px;
+  font-family: "Markazi", serif;
+}
+.fashion-content a:hover{
+  opacity:1;
+}
+.fashion-content a:after{
+  content:'';
+  display:block;
+  transform:scaleX(0);
+  border-bottom: solid 3px black;
+  transition: 200ms all ease-in-out;
+  transform-origin: 0%;
+}
+
+.fashion-content a:hover:after{
+  transform:scaleX(1);
+}
+/** FOOTER **/
+footer{
+  height:100vh;
+  background-color: #eee;
+  margin-top:1rem;
+}
+.footer-links{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position:relative;
+  width:100%;
+  justify-content: center;
+  margin:0 auto;
+}
+.footer-links li{
+  display:inline-block;
+  align-self: flex-start;
+  margin:5% 3rem;
+}
+.footer-links dl, .footer-links dd{
+  padding:.5rem;
+  font: .8rem/1 "Roboto";
+  letter-spacing: 1.2px
+}
+.footer-links li dl{
+  font-weight:bold;
+}
+.signup{
+  border:none;
+  padding:.5rem;
+}
+.signup:hover{
+  background-color:white;
+  cursor: pointer;
+}
+
+.social-media{
+  display:flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.social-media li{
+  display:inline-block;
+  margin:0 2rem;
+}
+.social-media li img{
+  width:30px;
+  cursor:pointer;
+  opacity:.5;
+}
+.social-media li img:hover{
+  opacity:1;
+}
+.footer-logo{
+  display: block;
+  margin: 3rem auto;
+}
+footer p{
+  text-align: center;
+  font:.8rem/1 "Roboto";
+}
+
+/**RESPONSIVE DESIGN**/
+@media screen and (max-width:1200px){
+  .fashion-info{
+    display:block;
+  }
+  .image{
+    display:block;
+    margin:0 auto 2rem auto;
+  }
+}
+@media screen and (min-width:981px){
+  .hover-over{
+    display:flex;
+    align-items: center;
+  }
+  .hover-over > li{
+    float:left;
+    list-style: none;
+    margin:0 1.5rem;
+    font: bold 1rem/1 "Comfortaa";
+    line-height:70px;
+    position:relative;
+  }
+  .hover-over .categories{
+    text-transform: uppercase;
+  }
+  .hover-over li ul{
+    position:absolute;
+    top:65px;
+    width:500px;
+    height:280px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    left:-999em;
+  }
+
+  .hover-over li:hover ul {
+  	left:0;
+    background-color:#fff;
+  }
+
+  .dropdown li{
+    list-style:none;
+    transition: all .2s ease-in-out;
+    padding-left:1rem;
+  }
+  .dropdown li:hover{
+    background-color:black;
+    color:white;
+  }
+}
+@media screen and (max-width:981px){
+  .hover-over > li{
+    font-size:1rem;
+    position: relative;
+    margin:10px;
+  }
+  .burger{
+    display: block;
+    width:30px;
+    position: relative;
+    margin-top:20px;
+    cursor:pointer;
+    opacity:.5;
+  }
+  .hover-over{
+    left:0;
+    right:0;
+    display:none;
+    top:60px;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+    font-family:"Comfortaa";
+    list-style: none;
+  }
+  .show{
+    display:block;
+  }
+  .hover-over li{
+    padding:10px 0;
+  }
+  .dropdown{
+    list-style: none;
+    display:none;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    height:100px;
+    margin-top:1rem;
+  }
+  .dropdown li{
+    padding:1rem;
+  }
+  .hover-over li:hover .dropdown{
+    display:flex;
+  }
+  .categories{
+    border-bottom:2px solid black;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width:800px){
+  .fashion-info{
+    display:block;
+    width:100%;
+    margin:0;
+  }
+  h1{
+    width:90%;
+  }
+}
+@media screen and (max-width:650px){
+  .fashion-articles{
+    width:100%;
+  }
+  .fashion-info{
+    display:block;
+    width:100%;
+    margin:0;
+  }
+  .image{
+    width:100%;
+  }
+  footer{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    text-align: center;
+  }
+  .footer-links{
+    display:block;
+    padding:10px 0;
+  }
+  .footer-links li{
+    display:block;
+  }
+  footer p{
+    margin: 0 0 100px 0;
+  }
+}
+@media screen and (max-width:490px){
+  .logo{
+    width:8rem;
+  }
+  .burger{
+    width:25px;
+  }
+  .dropdown{
+    height:200px;
+  }
+  .content-containers{
+    flex-direction: column;
+  }
+  .fashion-articles{
+    width:100%;
+  }
+  h1{
+    width:90%;
+    font-size:3rem;
+  }
+  .fashion-info{
+    display:block;
+    width:100%;
+    margin:0;
+  }
+  .fashion-info h2{
+    font-size:2.3rem;
+  }
+  .fashion-info h3{
+    font-size:1.3rem;
+  }
+  .fashion-info p{
+    font-size: 1.3rem;
+  }
+  .image{
+    display:none;
+  }
+
+}
