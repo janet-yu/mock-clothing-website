@@ -71,29 +71,30 @@ main{
 .slide-images{
   width:100%;
   margin:55px auto;
-
 }
 .content-containers{
   display:flex;
   width:90%;
   justify-content:space-between;
-  margin:0 auto;
+  margin:-30px auto;
   align-items: flex-start;
 }
-
 .information img{
   width:100%;
 }
 .information h3{
   position:absolute;
-  bottom:20px;
+  bottom:30px;
   background-color: white;
   font: 2rem/1 "Markazi";
   padding:1rem;
+  width:100%;
+  text-align: center;
   transition: .3s all ease-in-out;
 }
 .information h3:hover{
-  transform:translate(20%);
+  background-color:black;
+  color:white;
 }
 .new-arrivals{
   margin:2rem 1rem;
@@ -167,7 +168,7 @@ h3{
   margin-top:1rem;
   display:block;
   opacity:.5;
-  width:100px;
+  max-width:90px;
   font-family: "Markazi", serif;
 }
 .fashion-content a:hover{
@@ -187,9 +188,10 @@ h3{
 }
 /** FOOTER **/
 footer{
-  height:100vh;
+  height:auto;
   background-color: #eee;
   margin-top:1rem;
+  overflow:hidden;
 }
 .footer-links{
   display: flex;
@@ -207,15 +209,20 @@ footer{
 }
 .footer-links dl, .footer-links dd{
   padding:.5rem;
-  font: .8rem/1 "Roboto";
+  font-family:"Roboto",sans-serif;
   letter-spacing: 1.2px
 }
-.footer-links li dl{
+.footer-links dd{
+   font-size:.8rem;
+}
+.footer-links dl{
+  font-size: .9rem;
   font-weight:bold;
 }
 .signup{
   border:none;
   padding:.5rem;
+  text-transform: uppercase;
 }
 .signup:hover{
   background-color:white;
@@ -246,6 +253,7 @@ footer{
 footer p{
   text-align: center;
   font:.8rem/1 "Roboto";
+  margin: 0 0 50px 0;
 }
 
 /**RESPONSIVE DESIGN**/
@@ -312,7 +320,7 @@ footer p{
     position: relative;
     margin-top:20px;
     cursor:pointer;
-    opacity:.5;
+    opacity:.3;
   }
   .hover-over{
     left:0;
@@ -332,23 +340,31 @@ footer p{
   .hover-over li{
     padding:10px 0;
   }
+  .link-bg{
+    padding:10px;
+    display: block;
+    width:100%;
+  }
+  .color{
+    background-color:black;
+    color:white;
+  }
   .dropdown{
     list-style: none;
     display:none;
     flex-wrap:wrap;
     flex-direction: column;
     justify-content: flex-start;
-    height:100px;
+    height:150px;
     margin-top:1rem;
   }
   .dropdown li{
     padding:1rem;
   }
-  .hover-over li:hover .dropdown{
+  .dropContent{
     display:flex;
   }
   .categories{
-    border-bottom:2px solid black;
     padding: 10px 0;
   }
 }
@@ -360,6 +376,9 @@ footer p{
   }
   h1{
     width:90%;
+  }
+  .content-containers{
+    flex-direction: column;
   }
 }
 @media screen and (max-width:650px){
@@ -401,9 +420,6 @@ footer p{
   .dropdown{
     height:200px;
   }
-  .content-containers{
-    flex-direction: column;
-  }
   .fashion-articles{
     width:100%;
   }
@@ -427,6 +443,22 @@ footer p{
   }
   .image{
     display:none;
+  }
+  .social-media{
+    display:flex;
+    height:180px; /*to get two images in a column*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+  }
+  .social-media li{
+    display:inline-block;
+    margin:1rem 2rem;
+  }
+  .social-media li img{
+    width:30px;
+    cursor:pointer;
+    opacity:.5;
   }
 
 }

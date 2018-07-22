@@ -6,46 +6,37 @@ var navBar = document.querySelector('.hover-over');
 var navBarLinks = document.querySelectorAll(".hover-over li");
 var navHoverLinks = document.querySelector(".hover-over li ul");
 var burger = document.querySelector(".burger");
+var dropDownNav = document.querySelectorAll(".has-drop");
+
+var logo = document.querySelector(".logo");
+$('body').css('display','none');
+$('document').ready(function(){
+  $('body').fadeIn();
+});
+if(window.innerWidth < 400){
+  logo.setAttribute("src","images/minlogo.png");
+  logo.style.width = "80px";
+}
+window.addEventListener('resize', function(){if(window.innerWidth < 400){
+  logo.setAttribute("src","images/minlogo.png");
+  logo.style.width = "80px";
+}
+else{
+  logo.setAttribute("src","images/styleright.png")
+  logo.style.width = "10rem";
+}})
 
 
 burger.onclick = function(){
   navBar.classList.toggle('show');
 }
-$('body').css('display','none');
-$('document').ready(function(){
-  $('body').fadeIn();
-});
-
-// if(window.innerWidth > 981){
-//   window.onscroll = function(){scrollNav()};
-//
-//   function scrollNav(){
-//     if(document.body.scrollTop > 20 || document.documentElement.scrollTop >20){
-//       header.style.top = "-65px";
-//     }
-//     else{
-//       header.style.top = "0";
-//     }
-//   }
-// }
-// else{
-//   window.addEventListener('resize', function(){
-//       if(window.innerWidth > 981){
-//         window.onscroll = function(){scrollNav()};
-//
-//         function scrollNav(){
-//           if(document.body.scrollTop > 20 || document.documentElement.scrollTop >20){
-//             header.style.height = "100px";
-//             navBarLinks.style.lineHeight = "100px";
-//           }
-//           else{
-//             header.style.height = "60px";
-//           }
-//         }
-//       }
-//   });
-// }
-//
+for(let i = 0; i<dropDownNav.length;i++){
+  dropDownNav[i].addEventListener("click",function(e){
+    e.preventDefault();
+    document.querySelector("#"+dropDownNav[i].id+" ul").classList.toggle("dropContent");
+    document.querySelectorAll(".link-bg")[i].classList.toggle("color");
+  })
+}
 
 var slideIndex = 0;
 function slide(){
